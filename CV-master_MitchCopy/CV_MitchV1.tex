@@ -1,0 +1,200 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+
+% Configure page margins with geometry
+\usepackage{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{008000}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\photo{./img/mitch.png}
+\name{Mitchell}{Barker}
+
+\position{Data Analyst}
+\address{Columbus, OH}
+
+\mobile{330-936-8370}
+\email{\href{mailto:mtbarker@neo.rr.com}{\nolinkurl{mtbarker@neo.rr.com}}}
+\github{mitchbarker14}
+\linkedin{mitchell-barker}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+\quote{I am a technology focused individual with a drive for learning -
+I have been working with computers since I was 4 years old! I have a
+passion for working with data, and seeing what lies beneath its surface.
+I am always excited to showcase my diverse set of skills in a
+professional capacity.}
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{2em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\honortitlestyle{#1}}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\honordatestyle{#1}}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{certifications}{%
+\section{Certifications}\label{certifications}}
+
+\begin{cventries}
+    \cventry{}{Google Data Analytics Professional}{Coursera}{2023}{\begin{cvitems}
+\item Completed February 10, 2023. Covered the entire Data Analysis process, incorporating R, Markdown, SQL, Tableau, and Excel/Google Sheets.
+\end{cvitems}}
+    \cventry{}{Video Game Creation}{Stark State College of Technology}{2007}{\begin{cvitems}
+\item A course for video game creation designed for children. Mainly covered the components and process for creating simple games in GameMaker. It was mostly a lot of fun!
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{employment}{%
+\section{Employment}\label{employment}}
+
+\begin{cventries}
+    \cventry{CyberJaz}{Technology Alignment Manager}{Pittsburgh, PA}{July 2021 --> Present }{\begin{cvitems}
+\item Responsible for being the face of the company, as well as being a technical team member. Made consistent, self managed monthly visits to 20 clients, identifying client technology risk \& alignment with CyberJaz best practices.
+\item Delivered generated reports directly to clients, providing evidence for recommended changes and environment maintenance. Utilized Kaseya VSA, Powershell scripting and Microsoft Excel to automatically or manually gather data for presentation.
+\item Gained experience and knowledge of many different IT related platforms and management portals including: myITProcess, ITGlue, ConnectWise Manage, Duo MFA, Datto BDR
+\end{cvitems}}
+    \cventry{American Eagle Outfitters}{Help Desk Analyst Contractor}{Pittsburgh, PA}{September 2020 --> June 2021}{\begin{cvitems}
+\item Responsible for over the phone problem solving for networking, hardware, and software issues for thousands of devices across hundreds of stores and offices.
+\item Level 1 tech support, the initial point of contact for any and all individuals calling the Help Desk. Serviced thousands of user accounts internationally across the United States, Puerto Rico, Canada, and Mexico.
+\item Personally managed 30+ inbound calls/day, with 250+ tickets resolved per month on the JIRA ticketing platform.
+\end{cvitems}}
+    \cventry{Laird Plastics}{Inside Sales Representative}{Gibsonia, PA}{February 2020 --> August 2020}{\begin{cvitems}
+\item Responsible for generating new sales lead via 20+  cold calls per day, in addition to servicing existing accounts.
+\item Managed the entire client experience, including new client sourcing, order placement, product pricing and inventory management, and logistical management. Most tasks achieved with Oracle JDE E1 software.
+\item Accounts totaled ~\$1.0M in sales, and achieved 30\% existing sales growth during the outbreak of the Covid-19 pandemic.
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{skills}{%
+\section{Skills}\label{skills}}
+
+\begin{cventries}
+    \cventry{Python, R, SQL, SAS, Powershell Scripting, Markdown, RMarkdown}{Programming Languages}{}{}{}\vspace{-4.0mm}
+    \cventry{RStudio, Google BigQuery, SAS Studio, Notepad++}{Editing Platforms}{}{}{}\vspace{-4.0mm}
+    \cventry{Excel, Outlook, Visio, PowerPoint, Publisher, Word}{Microsoft Office}{}{}{}\vspace{-4.0mm}
+    \cventry{Tableau, Canva, Prezi}{Visualization/Presentation}{}{}{}\vspace{-4.0mm}
+\end{cventries}
+
+\pagebreak
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\begin{cventries}
+    \cventry{Kent State University}{Bachelors with a Major in Economics, Minor in Data Analytics}{Kent, OH}{2014 --> 2018}{\begin{cvitems}
+\item Strong background in statistical analysis, and economic theory: Econometrics I \& II, Data Preparation, Labor Markets \& Theory, Game Theory
+\end{cvitems}}
+    \cventry{GlenOak High School}{Diploma with Honors}{Canton, OH}{2010 --> 2014}{\begin{cvitems}
+\item Academic Challenge Team Co-Captain, First Chair Alto Saxophone in top jazz \& concert bands
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{organizations}{%
+\section{Organizations}\label{organizations}}
+
+\begin{cventries}
+    \cventry{}{Sigma Chi Fraternity}{Kent State University}{2014 --> 2018}{\begin{cvitems}
+\item Active member all four years of college. Held the position of Annotator in 2017, where I was responsible for chapter communications and record keeping, as well as being the liason for philanthropy events.
+\end{cvitems}}
+    \cventry{}{National Honors Society}{GlenOak High School}{2013 --> 2014}{}\vspace{-4.0mm}
+\end{cventries}
+
+
+
+\end{document}

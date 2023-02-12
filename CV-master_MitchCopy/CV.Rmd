@@ -1,0 +1,111 @@
+---
+name: Mitchell
+surname: Barker
+position: "Data Analyst"
+address: "Columbus, OH"
+profilepic: "./img/mitch.png"
+email: "mtbarker@neo.rr.com"
+github: mitchbarker14
+linkedin: mitchell-barker
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: "008000"
+aboutme: "I am a technology focused individual with a drive for learning - I have been working with computers since I was 4 years old! I have a passion for working with data, and seeing what lies beneath its surface. I am always excited to showcase my diverse set of skills in a professional capacity."
+docname: CV
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+
+require(xfun)
+
+packages <- c('vitae'     # The CV's LaTeX Template
+             ,'tibble'    # Data structure for tribbles
+             ,'magrittr'  # The Pipe %>%
+             ,'here'      # Relative File Paths
+             ,'readr'     # Data Loading
+             ,'glue'      # String Manipulation
+            )
+
+xfun::pkg_attach2(packages, message = FALSE)
+
+source(file = here("r","data.r"))
+
+```
+
+# Certifications
+
+```{r CERTIFICATIONS}
+
+certifications %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+
+```
+
+# Employment
+
+```{r EMPLOYMENT}
+
+work %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+# Skills
+
+```{r SKILLS}
+
+skills %>%
+  detailed_entries(
+    with = area,
+    what = skills
+  )
+
+```
+
+\pagebreak
+
+# Education
+
+```{r EDUCATION}
+
+edu %>%
+  detailed_entries(
+    with = inst,
+    what = degree,
+    why = detail,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+
+# Organizations
+
+```{r HONORS}
+
+organizations %>%
+  detailed_entries(
+    with = org,
+    why = detail,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
