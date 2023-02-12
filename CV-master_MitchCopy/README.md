@@ -1,3 +1,5 @@
+Original template sourced from https://github.com/tallguyjenks/CV -- this Readme.md and template was compiled by Bryan Jenks.  
+
 [![](./img/cvPreview.png)](https://github.com/tallguyjenks/CV/blob/master/CV.pdf)
 
 # My Data Driven CV
